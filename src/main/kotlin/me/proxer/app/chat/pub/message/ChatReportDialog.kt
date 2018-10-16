@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
+import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -13,7 +14,6 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.jakewharton.rxbinding2.widget.editorActionEvents
 import com.jakewharton.rxbinding2.widget.textChanges
@@ -43,7 +43,7 @@ class ChatReportDialog : BaseDialog() {
 
     private val viewModel by viewModel<ChatReportViewModel>()
 
-    private val messageInput: TextInputEditText by bindView(R.id.message)
+    private val messageInput: EditText by bindView(R.id.message)
     private val messageContainer: TextInputLayout by bindView(R.id.messageContainer)
     private val inputContainer: ViewGroup by bindView(R.id.inputContainer)
     private val progress: ProgressBar by bindView(R.id.progress)

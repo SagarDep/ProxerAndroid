@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,6 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.jakewharton.rxbinding2.widget.editorActionEvents
 import com.jakewharton.rxbinding2.widget.textChanges
@@ -47,9 +47,9 @@ class LoginDialog : BaseDialog() {
 
     private val viewModel by viewModel<LoginViewModel>()
 
-    private val username: TextInputEditText by bindView(R.id.username)
-    private val password: TextInputEditText by bindView(R.id.password)
-    private val secret: TextInputEditText by bindView(R.id.secret)
+    private val username: EditText by bindView(R.id.username)
+    private val password: EditText by bindView(R.id.password)
+    private val secret: EditText by bindView(R.id.secret)
     private val usernameContainer: TextInputLayout by bindView(R.id.usernameContainer)
     private val passwordContainer: TextInputLayout by bindView(R.id.passwordContainer)
     private val inputContainer: ViewGroup by bindView(R.id.inputContainer)
